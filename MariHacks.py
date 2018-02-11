@@ -1,4 +1,4 @@
-, met#Take sentence as astring input
+#Take sentence as astring input
 #split the sentence
 #remove the useless words
 #identify word classes
@@ -44,6 +44,8 @@ for word in words:
 
 os.chdir(cwd) 
 useless_words_file.close()          # close file
+clips_fixed_duration = [TextClip(txt, fontsize=170, color='green', size=(500,300)).set_duration(1) for txt in clips]
+
 concatenated_clips = concatenate_videoclips(clips, method='compose')
 ##os.remove('translation.mp4')
 concatenated_clips.write_videofile('translation.mp4')
