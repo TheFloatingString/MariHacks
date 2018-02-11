@@ -83,7 +83,7 @@ for word in words:
         test_open_file = open(videofile, 'r')
         test_open_file.close()
         clip = VideoFileClip(videofile)
-        clip.set_duration(0.5)
+        clip.set_duration(1)
         clips += [clip]
     except FileNotFoundError:
         useless_words += ' ' + word
